@@ -35,3 +35,11 @@ class UserMapper:
             first_name=user.first_name or None,
             last_name=user.last_name or None,
         )
+    
+    def to_notify_reset_password_dto(email: str, reset_url: str):
+        from app.microservices.users.application.dtos.user_dto import NotifyResetPasswordDTO
+        return NotifyResetPasswordDTO(
+            email=email,
+            reset_url=reset_url
+        )
+    

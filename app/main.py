@@ -6,6 +6,7 @@ from app.microservices.users.infrastructure.services.authentication_service impo
 
 from app.microservices.users.interface.controllers.user_controller import router as users_router
 from app.microservices.users.interface.controllers.authentication import router as auth_email_router
+from app.microservices.users.interface.controllers.reset_password import router as reset_password_router
 
 from app.microservices.users.infrastructure.database.db_postgrest import init_db, engine
 
@@ -33,4 +34,11 @@ app.include_router(
 app.include_router(
     users_router,
     prefix="/api",
-    tags=["users"],)
+    tags=["users"],
+)
+
+app.include_router(
+    reset_password_router,
+    prefix="/api",
+    tags=["users"],
+)

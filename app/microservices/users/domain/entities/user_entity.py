@@ -1,9 +1,9 @@
 from dataclasses import dataclass
-
+import uuid
 
 @dataclass
 class UserEntity:
-    id: int
+    id: uuid.UUID
     is_active: bool
     email: str
     password: str

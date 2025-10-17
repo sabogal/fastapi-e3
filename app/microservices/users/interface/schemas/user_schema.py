@@ -28,6 +28,9 @@ class UserUpdate(BaseModel):
     last_name: str | None = Field(None, max_length=120)
 
 
+class NotifyResetPassword(BaseModel):
+    email: EmailStr
+
 class Login(BaseModel):
     email: str 
     password: str

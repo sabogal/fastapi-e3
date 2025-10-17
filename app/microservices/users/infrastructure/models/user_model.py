@@ -4,6 +4,7 @@ from sqlalchemy.orm import Mapped, mapped_column
 from fastapi_users_db_sqlalchemy import SQLAlchemyBaseUserTableUUID
 from app.microservices.users.infrastructure.database.db_postgrest import Base
 
+
 class User(SQLAlchemyBaseUserTableUUID, Base):
     __tablename__ = "users"
     first_name: Mapped[str | None] = mapped_column(String(120))
