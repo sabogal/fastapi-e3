@@ -1,4 +1,4 @@
-from ..entities.user_entity import UserEntity
+from ...entities.user_entity import UserEntity
 from abc import ABC, abstractmethod
 
 
